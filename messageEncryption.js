@@ -1,5 +1,7 @@
-// path: desktop/javascriptScripts/messageEncryption.js
+
 // libraries
+
+// mathjs
 var math = require('mathjs');
 // lodash imports
 // array methods
@@ -16,6 +18,7 @@ var split = require('lodash/split');
 
 // Script Logic
 var matrixEncryption = (function(){
+  
   var characters = split(" abcdefghijklmnopqrstuvwxyz",'');
   // private cipher collection
   var users = {
@@ -111,17 +114,20 @@ var matrixEncryption = (function(){
     },
     decrypt: decryptMessage
   }
+  
 })();
 
+// encrypt & decrypt methods returned from matrixEncryption module.
 var encrypt = matrixEncryption.encrypt;
 var decrypt = matrixEncryption.decrypt;
 
 // message
 var msg = "Reveal my content";
 
+// invoking encryption/ decryption
 var codedMessage = encrypt(msg);
 var message = codedMessage.message;
 var cipher = codedMessage.cipher;
-
 console.log(message);
-console.log( decrypt(message, cipher) );
+console.log(cipher);
+console.log(decrypt(message, cipher));
