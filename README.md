@@ -1,6 +1,6 @@
 # Matrix-Encryption
 
-A module for encrypting strings via matrix multiplication.  
+A module for encrypting strings via matrix multiplication.  A simple application of linear algebra.
 
 <h3>Process:</h3>
 
